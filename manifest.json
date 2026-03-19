@@ -1,0 +1,45 @@
+{
+  "manifest_version": 3,
+  "name": "SubHunter",
+  "version": "1.0.0",
+  "description": "Discover subdomains via Certificate Transparency logs, DNS brute-force, and verify live hosts - all offline-capable with free APIs",
+  "author": "SubHunter",
+  "permissions": [
+    "storage",
+    "activeTab",
+    "tabs",
+    "sidePanel"
+  ],
+  "host_permissions": [
+    "https://crt.sh/*",
+    "https://dns.google/*",
+    "https://api.certspotter.com/*",
+    "https://api.subdomain.center/*"
+  ],
+  "action": {
+    "default_popup": "popup/popup.html",
+    "default_icon": {
+      "16": "icons/icon16.svg",
+      "32": "icons/icon32.svg",
+      "48": "icons/icon48.svg",
+      "128": "icons/icon128.svg"
+    },
+    "default_title": "SubHunter - Subdomain Scanner"
+  },
+  "side_panel": {
+    "default_path": "sidepanel/sidepanel.html"
+  },
+  "icons": {
+    "16": "icons/icon16.svg",
+    "32": "icons/icon32.svg",
+    "48": "icons/icon48.svg",
+    "128": "icons/icon128.svg"
+  },
+  "background": {
+    "service_worker": "background/service-worker.js"
+  },
+  "options_ui": {
+    "page": "options/options.html",
+    "open_in_tab": true
+  }
+}
